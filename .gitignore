@@ -13,6 +13,7 @@
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -69,3 +70,4 @@ dist/trade_controller.js
 dist/interfaces/DataBase.interface.js
 dist/interfaces/DataBaseInterface.js
 dist/services/error.service.js
+src/envaironment_variables.ts
