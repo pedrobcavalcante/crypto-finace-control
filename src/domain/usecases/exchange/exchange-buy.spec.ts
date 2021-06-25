@@ -14,7 +14,8 @@ interface typeSut{
 const makeSut = (): typeSut => {  
     const params: LimitParams = {
         pair: 'valid_pair',
-        quantity: 'valid_value'
+        quantity: 'valid_value',
+        price: 'valid_price'
     }    
     const logger = new LoggerStub()
     const exchangeStub = new ExchangeStub()

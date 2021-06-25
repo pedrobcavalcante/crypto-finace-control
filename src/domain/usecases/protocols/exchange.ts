@@ -1,13 +1,14 @@
 export interface LimitParams{
     pair: string, 
-    quantity: string
+    quantity: string,
+    price: string
 }
 
 export interface MarketParams{
      pair: string, 
-     quantity: string, 
-     price: string
+     quantity: string
 }
+
   
 export default interface Exchange{
     getInfo(): Promise<any>    

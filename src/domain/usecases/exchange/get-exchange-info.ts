@@ -15,7 +15,7 @@ export default class GetExchangeInfo{
         this.logger = logger
     }
 
-    async get(): Promise<ExchangeInfo> {
+    async get(): Promise<ExchangeInfo> {        
         if (this.exchangeInfoexists) {
           return this.exchangeInfo;
         } else {
@@ -25,6 +25,7 @@ export default class GetExchangeInfo{
             this.logger.log(error);
             console.log(error);
           }
+          //TODO melhorar o retorno
           return this.exchangeInfo;          
         }
     }

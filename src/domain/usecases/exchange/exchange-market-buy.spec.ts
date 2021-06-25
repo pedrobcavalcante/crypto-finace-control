@@ -14,8 +14,7 @@ interface typeSut{
 const makeSut = (): typeSut => {      
     const params: MarketParams = {
         pair: 'valid_pair',
-        quantity: 'valid_value', 
-        price: 'valid_price'
+        quantity: 'valid_value'         
     }
     const logger = new LoggerStub()
     const exchangeStub = new ExchangeStub()
