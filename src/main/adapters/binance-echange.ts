@@ -1,19 +1,23 @@
 import Exchange, { LimitParams, MarketParams } from "../../domain/usecases/protocols/exchange";
-import Binance from 'node-binance-api';
+import { ExchangeInfo } from "../../models/exchangeInfo.model";
+const Binance = require('node-binance-api');
 
 export default class BinanceExchange implements Exchange{
     private readonly binance: any
     
-    constructor(apiKey?: string, apiSecret?: string) {
-        this.binance = new Binance()
-        this.binance.options({
-            APIKEY: apiKey || "",
-            APISECRET: apiSecret || "",
-        });
+    constructor(apiKey: string, apiSecret: string) {        
+        this.binance = new Binance().options({
+            APIKEY: apiKey,
+            APISECRET: apiSecret
+        });        
+    }
+
+    async getAccount(): Promise<any> {      
+        return await this.binance.account()
     }
     
-    getInfo(): Promise<any> {
-        throw new Error("Method not implemented.");
+    async getInfo(): Promise<ExchangeInfo> {      
+        return await this.binance.exchangeInfo()
     }
     sell(params: LimitParams): Promise<void> {
         throw new Error("Method not implemented.");

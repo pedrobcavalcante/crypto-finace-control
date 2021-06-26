@@ -15,12 +15,12 @@ export default class GetExchangeInfo{
         this.logger = logger
     }
 
-    async get(): Promise<ExchangeInfo> {        
+    async get(): Promise<any> {        
         if (this.exchangeInfoexists) {
           return this.exchangeInfo;
         } else {
           try {            
-            this.exchangeInfo = await this.exchange.getInfo();            
+            this.exchangeInfo = await this.exchange.getAccount();            
           } catch (error) {        
             this.logger.log(error);
             console.log(error);

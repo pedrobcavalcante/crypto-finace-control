@@ -1,3 +1,5 @@
+import { ExchangeInfo } from "../../../models/exchangeInfo.model";
+
 export interface LimitParams{
     pair: string, 
     quantity: string,
@@ -11,7 +13,8 @@ export interface MarketParams{
 
   
 export default interface Exchange{
-    getInfo(): Promise<any>    
+    getAccount():  Promise<any>    
+    getInfo():  Promise<ExchangeInfo>    
     sell(params: LimitParams): Promise<void>        
     buy(params: LimitParams): Promise<void>        
     marketSell(params: MarketParams): Promise<void>
