@@ -14,7 +14,6 @@ export default class ExchangeAccount{
         await this.exchange.getAccount();
       } catch (error) {        
         this.logger.log(error);
-        console.log(error);
       }
     }
 }

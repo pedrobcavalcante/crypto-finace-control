@@ -14,8 +14,7 @@ export default class ExchangeMarketSell implements MarketOrder{
       try {
         await this.exchange.marketSell(params);
       } catch (error) {        
-        this.logger.log(error);
-        console.log(error);
+        this.logger.log(error);        
       }
     }
 }

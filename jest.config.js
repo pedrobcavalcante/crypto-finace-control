@@ -1,6 +1,7 @@
 
 const config = {
-  roots: ['<rootDir>/src'],
+  verbose: true,
+  roots: ['<rootDir>/src'],  
   collectCoverageFrom: [
     '<rootDir>/src/**/*.ts'        
   ],
@@ -8,11 +9,11 @@ const config = {
     "<rootDir>/src/main/",
     ".mock.ts"
 ],
-  coverageDirectory: "coverage",    
-  testEnvironment: "node",
+  coverageDirectory: "coverage",      
+  testEnvironment: "node",  
   transform: {
     '.+\\.ts$': 'ts-jest'
-  },
+  },  
 };
 
 module.exports = config

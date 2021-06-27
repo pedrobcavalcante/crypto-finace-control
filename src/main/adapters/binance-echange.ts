@@ -1,5 +1,5 @@
+import { ExchangeInfo } from "../../domain/models/exchange-info";
 import Exchange, { LimitParams, MarketParams } from "../../domain/usecases/protocols/exchange";
-import { ExchangeInfo } from "../../models/exchangeInfo.model";
 const Binance = require('node-binance-api');
 
 export default class BinanceExchange implements Exchange{

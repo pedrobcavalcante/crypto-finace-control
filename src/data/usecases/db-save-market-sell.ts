@@ -16,7 +16,6 @@ export default class SaveMarketOrderSell implements SavePayloadRepository{
             await this.savePayloadRepository.save(paylaod_with_order_type);
           } catch (error) {        
             this.logger.log(error);
-            console.log(error);
           }
         
     }

@@ -14,7 +14,6 @@ export default class ExchangeAccount{
         await this.exchange.getPrice(symbol);
       } catch (error) {        
         this.logger.log(error);
-        console.log(error);
       }
     }
 }

@@ -23,7 +23,6 @@ export default class GetExchangeInfo{
             this.exchangeInfo = await this.exchange.getInfo();            
           } catch (error) {        
             this.logger.log(error);
-            console.log(error);
           }
           //TODO melhorar o retorno
           return this.exchangeInfo;          

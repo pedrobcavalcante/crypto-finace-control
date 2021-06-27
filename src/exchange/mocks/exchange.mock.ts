@@ -26,7 +26,7 @@ export default class ExchangeStub implements Exchange{
     buy(params: LimitParams): Promise<void> {
         return Promise.resolve()
     }  
-    getPrice(symbol: string): Promise<string> {
-        return Promise.resolve(symbol)
+    getPrice(symbol: string): Promise<any> {
+        return Promise.resolve()
     }     
 }

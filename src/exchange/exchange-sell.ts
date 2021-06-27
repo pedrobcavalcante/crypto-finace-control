@@ -15,7 +15,6 @@ export default class ExchangeLimitedSell implements LimitedOrder{
         await this.exchange.sell(params);
       } catch (error) {        
         this.logger.log(error);
-        console.log(error);
       }
     }
 }
