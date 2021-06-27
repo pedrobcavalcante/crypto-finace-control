@@ -1,5 +1,5 @@
-import LogErrorRepository from "../../../data/protocols/log-repository"
-import Exchange from "../protocols/exchange"
+import LogErrorRepository from "../data/protocols/log-repository"
+import Exchange from "../domain/usecases/protocols/exchange"
 import ExchangeAccount from "./get-exchange-account"
 import ExchangeStub from "./mocks/exchange.mock"
 import LoggerStub from "./mocks/log.mock"

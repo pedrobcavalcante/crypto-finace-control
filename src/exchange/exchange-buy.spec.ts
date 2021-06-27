@@ -1,11 +1,11 @@
-import LogErrorRepository from "../../../data/protocols/log-repository"
-import Exchange, { LimitParams } from "../protocols/exchange"
-import ExchangeBuy from "./exchange-buy"
+import LogErrorRepository from "../data/protocols/log-repository"
+import Exchange, { LimitParams } from "../domain/usecases/protocols/exchange"
+import ExchangeLimitedBuy from "./exchange-buy"
 import ExchangeStub from "./mocks/exchange.mock"
 import LoggerStub from "./mocks/log.mock"
 
 interface typeSut{
-    sut: ExchangeBuy, 
+    sut: ExchangeLimitedBuy, 
     exchangeStub: Exchange, 
     logger: LogErrorRepository,
     params: LimitParams
@@ -19,7 +19,7 @@ const makeSut = (): typeSut => {
     }    
     const logger = new LoggerStub()
     const exchangeStub = new ExchangeStub()
-    const sut = new ExchangeBuy(exchangeStub, logger)
+    const sut = new ExchangeLimitedBuy(exchangeStub, logger)
 
     return { sut , exchangeStub, logger, params }
 }
@@ -27,28 +27,28 @@ const makeSut = (): typeSut => {
 describe('Test Exchange buy', () => {
     test('Should call exchange method buy from exchange', async () => {        
         const {sut, exchangeStub, params }  = makeSut()
-        const buySpy = jest.spyOn(exchangeStub, 'buy')
-        await sut.buy(params)
+        const executeSpy = jest.spyOn(exchangeStub, 'buy')
+        await sut.execute(params)
 
-        expect(buySpy).toBeCalled()         
+        expect(executeSpy).toBeCalled()         
     })
 
-    test('Should call exchange method buy with correct values', async () => {       
+    test('Should call exchange method execute with correct values', async () => {       
         const {sut, exchangeStub, params }  = makeSut()
-        const buySpy = jest.spyOn(exchangeStub, 'buy')
-        await sut.buy(params)
+        const executeSpy = jest.spyOn(exchangeStub, 'buy')
+        await sut.execute(params)
 
-        expect(buySpy).toBeCalledWith(params)
+        expect(executeSpy).toBeCalledWith(params)
     })
 
 
-    test('Should method buy log a error', async () => {       
+    test('Should method execute log a error', async () => {       
         const {sut, exchangeStub, logger, params }  = makeSut() 
         const logSpy = jest.spyOn(logger, 'log')
         jest
           .spyOn(exchangeStub, 'buy')
           .mockReturnValueOnce(Promise.reject(new Error()))        
-        await sut.buy(params)
+        await sut.execute(params)
 
         expect(logSpy).toBeCalled()
     })
