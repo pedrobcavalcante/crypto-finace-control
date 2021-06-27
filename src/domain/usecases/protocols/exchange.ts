@@ -1,4 +1,5 @@
-import { ExchangeInfo } from "../../../models/exchangeInfo.model";
+import { ExchangeInfo } from "../../models/exchange-info";
+
 export interface LimitParams{
     pair: string, 
     quantity: string,

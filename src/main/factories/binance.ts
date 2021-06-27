@@ -1,4 +1,4 @@
-import BinanceExchange from "../adapters/binance-echange"
+import BinanceExchange from "../adapters/binance-exchange"
 import env from '../config/env'
 
 export const makeBinance = (): BinanceExchange => {

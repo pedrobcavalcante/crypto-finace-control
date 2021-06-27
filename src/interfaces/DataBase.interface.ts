@@ -1,4 +1,4 @@
-import { ListValue } from "../models/listValue.model";
+import { ListValue } from "../../old-files/models/listValue.model";
 
 export default interface DataBaseInterface {
   adicionar(banco: string, data: object): Promise<boolean>;
