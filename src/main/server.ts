@@ -11,5 +11,5 @@ const main = async () => {
     console.log(value)
 }
 
-console.log("Rodou....")
+
 main()

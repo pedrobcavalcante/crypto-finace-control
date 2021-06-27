@@ -11,6 +11,9 @@ export default class BinanceExchange implements Exchange{
             APISECRET: apiSecret
         });        
     }
+    getPrice(symbol: string): Promise<string> {
+        throw new Error("Method not implemented.");
+    }
 
     async getAccount(): Promise<any> {      
         return await this.binance.account()

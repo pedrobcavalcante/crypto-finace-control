@@ -20,7 +20,7 @@ export default class GetExchangeInfo{
           return this.exchangeInfo;
         } else {
           try {            
-            this.exchangeInfo = await this.exchange.getAccount();            
+            this.exchangeInfo = await this.exchange.getInfo();            
           } catch (error) {        
             this.logger.log(error);
             console.log(error);

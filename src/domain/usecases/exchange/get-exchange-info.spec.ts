@@ -2,8 +2,8 @@ import LogErrorRepository from "../../../data/protocols/log-repository"
 import { ExchangeInfo } from "../../models/exchange-info"
 import Exchange from "../protocols/exchange"
 import GetExchangeInfo from "./get-exchange-info"
-import ExchangeStub from "./mocks/exchange-mock"
-import LoggerStub from "./mocks/log-mock"
+import ExchangeStub from "./mocks/exchange.mock"
+import LoggerStub from "./mocks/log.mock"
 
 interface typeSut{
     sut: GetExchangeInfo, 

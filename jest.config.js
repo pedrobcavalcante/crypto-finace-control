@@ -2,8 +2,12 @@
 const config = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: [
-    '<rootDir>/src/**/*.ts',    
+    '<rootDir>/src/**/*.ts'        
   ],
+  coveragePathIgnorePatterns: [   
+    "<rootDir>/src/main/",
+    ".mock.ts"
+],
   coverageDirectory: "coverage",    
   testEnvironment: "node",
   transform: {

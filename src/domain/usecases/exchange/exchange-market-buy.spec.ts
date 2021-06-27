@@ -1,8 +1,8 @@
 import LogErrorRepository from "../../../data/protocols/log-repository"
 import Exchange, { MarketParams } from "../protocols/exchange"
 import ExchangeMarketBuy from "./exchange-market-buy"
-import ExchangeStub from "./mocks/exchange-mock"
-import LoggerStub from "./mocks/log-mock"
+import ExchangeStub from "./mocks/exchange.mock"
+import LoggerStub from "./mocks/log.mock"
 
 interface typeSut{
     sut: ExchangeMarketBuy, 

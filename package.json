@@ -15,7 +15,7 @@
     "description": "",
     "scripts": {
         "start": "sucrase-node src/main/server.ts",
-        "test": "jest --passWithNoTests --watch --silent ",
+        "test": "jest --passWithNoTests --watch --silent --coverage",
         "test:ci": "jest --passWithNoTests --silent --noStackTrace --runInBand --coverage",
         "test:verbose": "jest --passWithNoTests --verbose",
         "build": "tsc --build",
