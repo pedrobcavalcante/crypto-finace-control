@@ -1,0 +1,39 @@
+{
+    "name": "cripto-finance-control",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pedrobcavalcante/Cripto-finance-control.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/pedrobcavalcante/Cripto-finance-control/issues"
+    },
+    "homepage": "https://github.com/pedrobcavalcante/Cripto-finance-control#readme",
+    "description": "",
+    "scripts": {
+        "start": "sucrase-node src/main/server.ts",
+        "test": "jest",
+        "test:ci": "jest --passWithNoTests --silent --noStackTrace --runInBand --coverage",
+        "test:verbose": "jest --passWithNoTests --verbose",
+        "build": "tsc --build",
+        "clean": "tsc --build --clean"
+    },
+    "dependencies": {
+        "mongodb": "^3.6.9",
+        "node-binance-api": "^0.12.5",
+        "sucrase": "^3.19.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.23",
+        "@types/node": "^14.14.29",
+        "@types/supertest": "^2.0.11",
+        "jest": "^27.0.5",        
+        "ts-jest": "^27.0.3",
+        "ts-node": "^9.1.1",
+        "tslint": "^5.12.1",
+        "typescript": "^3.9.9"
+    }
+}
