@@ -1,5 +1,3 @@
-import { BookTicker } from "./bookTicker.model";
-import { Filter } from "./filter.model";
 
 export interface Symbol {
     symbol: string

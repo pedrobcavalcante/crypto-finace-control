@@ -1,4 +1,4 @@
-import { ExchangeInfo } from "../../domain/models/exchange-info"
+import { ExchangeInfo } from "../../domain/model/exchange-info"
 import Exchange, { LimitParams, MarketParams } from "../../domain/usecases/protocols/exchange"
 
 export default class ExchangeStub implements Exchange{

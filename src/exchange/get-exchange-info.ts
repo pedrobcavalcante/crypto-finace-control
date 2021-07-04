@@ -1,6 +1,6 @@
 
 import LogErrorRepository from "../data/protocols/log-repository";
-import { ExchangeInfo } from "../domain/models/exchange-info";
+import { ExchangeInfo } from "../domain/model/exchange-info";
 import Exchange from "../domain/usecases/protocols/exchange";
 
 
