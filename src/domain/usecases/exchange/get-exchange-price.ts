@@ -1,5 +1,5 @@
-import LogErrorRepository from "../data/protocols/log-repository";
-import Exchange from "../domain/usecases/protocols/exchange";
+import LogErrorRepository from "../../../data/protocols/log-repository";
+import Exchange from "../protocols/exchange";
 
 export default class ExchangeAccount{
     private readonly exchange: Exchange
@@ -9,9 +9,9 @@ export default class ExchangeAccount{
         this.logger = logger
     }
 
-    async getAccount() {            
+    async getPrice(symbol: string) {            
       try {
-        await this.exchange.getAccount();
+        await this.exchange.getPrice(symbol);
       } catch (error) {        
         this.logger.log(error);
       }

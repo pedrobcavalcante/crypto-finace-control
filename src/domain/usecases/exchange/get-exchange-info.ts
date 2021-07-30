@@ -1,7 +1,7 @@
 
-import LogErrorRepository from "../data/protocols/log-repository";
-import { ExchangeInfo } from "../domain/models/exchange-info";
-import Exchange from "../domain/usecases/protocols/exchange";
+import LogErrorRepository from "../../../data/protocols/log-repository";
+import { ExchangeInfo } from "../../models/exchange-info";
+import Exchange from "../protocols/exchange";
 
 
 export default class GetExchangeInfo{

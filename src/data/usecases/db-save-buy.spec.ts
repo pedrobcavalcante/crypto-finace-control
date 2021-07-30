@@ -1,5 +1,5 @@
-import LoggerStub from "../../exchange/mocks/log.mock"
-import SavePayloadRepositoryStub from "../../exchange/mocks/save-payload-repository.mock"
+import LoggerStub from "../../domain/usecases/exchange/mocks/log.mock"
+import SavePayloadRepositoryStub from "../../domain/usecases/exchange/mocks/save-payload-repository.mock"
 import SavePayloadRepository, { ORDER_TYPE_BUY, Payload } from "../protocols/db-save-payload-repository"
 import LogErrorRepository from "../protocols/log-repository"
 import SaveBuy from "./db-save-buy"

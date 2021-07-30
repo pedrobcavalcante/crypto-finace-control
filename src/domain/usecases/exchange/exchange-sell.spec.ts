@@ -1,5 +1,5 @@
-import LogErrorRepository from "../data/protocols/log-repository"
-import Exchange, { LimitParams } from "../domain/usecases/protocols/exchange"
+import LogErrorRepository from "../../../data/protocols/log-repository"
+import Exchange, { LimitParams } from "../protocols/exchange"
 import ExchangeLimitedSell from "./exchange-sell"
 import ExchangeStub from "./mocks/exchange.mock"
 import LoggerStub from "./mocks/log.mock"

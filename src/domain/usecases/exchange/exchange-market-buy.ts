@@ -1,6 +1,6 @@
-import LogErrorRepository from "../data/protocols/log-repository";
-import MarketOrder from "../domain/usecases/market-order";
-import Exchange, { MarketParams } from "../domain/usecases/protocols/exchange";
+import LogErrorRepository from "../../../data/protocols/log-repository";
+import MarketOrder from "../market-order";
+import Exchange, { MarketParams } from "../protocols/exchange";
 
 export default class ExchangeMarketBuy implements MarketOrder{
     private readonly exchange: Exchange

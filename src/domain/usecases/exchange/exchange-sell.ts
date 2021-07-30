@@ -1,8 +1,8 @@
-import LogErrorRepository from "../data/protocols/log-repository";
-import LimitedOrder from "../domain/usecases/limited-order";
-import Exchange, { LimitParams } from "../domain/usecases/protocols/exchange";
+import LogErrorRepository from "../../../data/protocols/log-repository";
+import LimitedOrder from "../limited-order";
+import Exchange, { LimitParams } from "../protocols/exchange";
 
-export default class ExchangeLimitedBuy implements LimitedOrder{
+export default class ExchangeLimitedSell implements LimitedOrder{
     private readonly exchange: Exchange
     private readonly logger: LogErrorRepository
     constructor(exchange: Exchange, logger: LogErrorRepository) {
@@ -12,7 +12,7 @@ export default class ExchangeLimitedBuy implements LimitedOrder{
 
     async execute(params: LimitParams) {            
       try {
-        await this.exchange.buy(params);
+        await this.exchange.sell(params);
       } catch (error) {        
         this.logger.log(error);
       }
