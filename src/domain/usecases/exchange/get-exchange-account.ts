@@ -1,5 +1,5 @@
+import Exchange from "../../../data/interfaces/exchange.interface";
 import LogErrorRepository from "../../../data/protocols/log-repository";
-import Exchange from "../protocols/exchange";
 
 export default class ExchangeAccount{
     private readonly exchange: Exchange
